@@ -2,7 +2,7 @@ import json
 import csv
 
 # read areas/rooms
-with open('.storage/core.area_registry') as json_file:
+with open('.storage/core.area_registry') as json_file:      # <=== check path
     areareg = json.load(json_file)
 
 areas = {}
@@ -12,7 +12,7 @@ for area in areareg["data"]["areas"]:
     areas[id] = name
 
 # read device registry
-with open('.storage/core.device_registry') as json_file:
+with open('.storage/core.device_registry') as json_file:       # <=== check path
     d = json.load(json_file)
 
 with open('devreg.csv', mode='w') as devreg:
